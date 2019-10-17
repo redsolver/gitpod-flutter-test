@@ -1,0 +1,15 @@
+image:
+  file: .gitpod.Dockerfile
+tasks:
+- init: >
+    flutter packages pub global activate webdev &&
+    flutter pub upgrade && flutter pub get && flutter pub global run  webdev serve
+  command: >
+    flutter pub global run webdev serve --release
+ports:
+- port: 8080
+  onOpen: open-preview
+vscode:
+  extensions:
+    - Dart-Code.dart-code@3.5.1:D5Ni/AB9J3ezSard6+nUOw==
+    - Dart-Code.flutter@3.5.1:nHULfIXUWYp4uMmJOJwV1w==
